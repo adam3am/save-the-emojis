@@ -1,0 +1,20 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run styles && concurrently 'npm run watch:server' 'npm run watch:styles'",
+    "styles": "node-sass -r scss/ -o styles/",
+    "watch:server": "live-server",
+    "watch:styles": "node-sass -w -r scss/ -o styles/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "live-server": "^1.2.2",
+    "node-sass": "^9.0.0"
+  }
+}
